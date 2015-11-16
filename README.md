@@ -1,8 +1,10 @@
-# react-flux-starter-kit
+# Psych Humiliation Game
 
-A starter kit for developing applications with react, flux, and react-router
+A game to test the affects of humiliation. 
 
 ## usage
+
+`npm install` to  get node packages
 
 `./scripts/dev` to run dev server
 
