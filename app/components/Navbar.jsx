@@ -11,12 +11,11 @@ var navbarInstance = React.createClass({
       <div className="navbar navbar-default">
         <div className="container">
           <div className="navbar-header">
-            <Link to="/" className="navbar-brand">App Name</Link>
+            <Link to="/" className="navbar-brand">Click me if you can</Link>
           </div>
           <div className="collapse navbar-collapse">
             <ul className="nav navbar-nav navbar-left">
               <li>
-                <a href="#">Item</a>
               </li>
             </ul>
           </div>

@@ -12,6 +12,10 @@ var ObjectAPI = {
     }).catch(function(err) {
       ObjectServerActionCreators.handleObjectError(err);
     });
+  },
+
+  updateObject: function(id, game, time, humiliated) {
+    CoreAPI.update(id, game, time, humiliated);
   }
 
 };

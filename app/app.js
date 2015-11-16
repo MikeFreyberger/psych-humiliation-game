@@ -14,8 +14,8 @@ var serverRender = require('./server');
 var compression  = require('compression');
 var favicon      = require('serve-favicon');
 var app = express();
+var db = {};
 
-app.use(favicon(__dirname + '/../public/images/favicon.ico'));
 app.use(logger(app.get('env') === 'production' ? 'combined' : 'dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -37,6 +37,20 @@ if (app.get('env') === 'development') {
     res.redirect('http://localhost:3001/js' + req.path);
   });
 }
+
+function writeDB(data) {
+  if (!db[data.id])
+    db[data.id] = {};
+  db[data.id][data.game] = data.time;
+  db[data.id].humiliated = db[data.id].humiliated || data.humiliated;
+  console.log(db);
+}
+
+app.post('/api/time', function(req, res, next) {
+  console.log("HIT");
+  console.log(req.body);
+  writeDB(req.body);
+});
 
 // use react routes
 app.use('/', serverRender);

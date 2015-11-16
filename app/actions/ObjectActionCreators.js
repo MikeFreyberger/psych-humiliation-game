@@ -16,6 +16,10 @@ module.exports = {
     });
 
     ObjectAPI.requestObject(id);
+  },
+
+  updateDB: function(userId, game, time, humiliated) {
+    ObjectAPI.updateObject(userId, game, time, humiliated)
   }
 
 };
