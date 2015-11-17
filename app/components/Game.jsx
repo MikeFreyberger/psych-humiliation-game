@@ -35,7 +35,7 @@ var Game = React.createClass({
 
   movePicture: function() {
     document.getElementById("duck").style.left = 900 * Math.random() + "px";
-    document.getElementById("duck").style.top = 600 * Math.random() + "px";
+    document.getElementById("duck").style.top = 400 * Math.random() + "px";
   },
 
   handleNewGame: function() {
