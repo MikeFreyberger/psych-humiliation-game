@@ -14,6 +14,7 @@ var Survey = require('./pages/Survey.jsx');
 module.exports = (
   <Route name='root' path='/' handler={App}>
     <DefaultRoute handler={HomePage} />
+    <Route name='home' path='/' handler={HomePage} />
     <Route name='game1' path='/game1' handler={GamePage} />
     <Route name='game2' path='/game2' handler={GamePage} />
     <Route name='game3' path='/game3' handler={GamePage} />
