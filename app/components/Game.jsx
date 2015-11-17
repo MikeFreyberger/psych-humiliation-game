@@ -4,6 +4,7 @@ var React = require('react');
 var Router = require('react-router');
 var GameConstants = require('../constants/GameConstants');
 var ObjectActionCreators = require('../actions/ObjectActionCreators');
+var ObjectStore = require('../stores/ObjectStore');
 
 var Link = Router.Link;
 
@@ -63,6 +64,10 @@ var Game = React.createClass({
         hitCount: hitCount
       }
     );
+  },
+
+  componentWillMount: function() {
+    ObjectStore.saveId(this.state.userId);
   },
 
   componentDidUpdate: function() {

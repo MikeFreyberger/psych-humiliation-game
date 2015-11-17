@@ -20,6 +20,10 @@ module.exports = {
 
   updateDB: function(userId, game, time, humiliated) {
     ObjectAPI.updateObject(userId, game, time, humiliated)
+  },
+
+  inputSurvey: function(userId, surveyData) {
+    ObjectAPI.updateWithSurvey(userId, surveyData);
   }
 
 };

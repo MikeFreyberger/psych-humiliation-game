@@ -4,15 +4,20 @@ var React = require('react');
 var Router = require('react-router');
 var Link = Router.Link;
 
-var navbarInstance = React.createClass({
+var Survey = React.createClass({
+
+  onSubmit: function() {
+
+  },
 
   render: function() {
     return (
       <div className="col-md-12">
-        Survey
+        <h1>Survey</h1>
+        <div />
       </div>
     );
   }
 });
 
-module.exports = navbarInstance;
+module.exports = Survey;

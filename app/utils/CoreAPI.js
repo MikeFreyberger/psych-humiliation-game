@@ -22,6 +22,21 @@ var CoreAPI = {
           }
         });
 
+  },
+
+  updateWithSurvey: function(id, surveyData) {
+    superagent.post('/api/survey')
+      .send({id: id, survey: surveyData})
+      .set('Access-Control-Allow-Origin', 'http://localhost')
+      .set('Access-Control-Allow-Headers', 'X-Requested-With')
+      .set('Access-Control-Allow-Credentials', 'true')
+      .end(function(err, res){
+        if (res.ok) {
+          alert('yay got ' + JSON.stringify(res.body));
+        } else {
+          alert('Oh no! error ' + res.text);
+        }
+      });
   }
 };
 

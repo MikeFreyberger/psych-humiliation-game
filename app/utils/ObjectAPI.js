@@ -16,6 +16,10 @@ var ObjectAPI = {
 
   updateObject: function(id, game, time, humiliated) {
     CoreAPI.update(id, game, time, humiliated);
+  },
+
+  updateWithSurvey: function(id, surveyData) {
+    CoreAPI.updateWithSurvey(id, surveyData);
   }
 
 };

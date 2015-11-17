@@ -13,20 +13,16 @@ var mergeIntoBag = StoreUtils.mergeIntoBag;
 
 var _storedObjects = {};
 
+var userId;
+
 var ObjectStore = createStore({
 
-  contains: function(id) {
-    return (isInBag(_storedObjects, id));
+  saveId: function(id) {
+    userId = id;
   },
 
-  get: function(id) {
-    return _storedObjects[id];
-  },
-
-  getAll: function() {
-    return Object.keys(_storedObjects).map(function(id) {
-      return _storedObjects[id];
-    });
+  getUserId: function() {
+    return userId;
   }
 });
 

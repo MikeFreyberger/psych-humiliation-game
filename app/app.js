@@ -39,6 +39,7 @@ if (app.get('env') === 'development') {
 }
 
 function writeDB(data) {
+  console.log(data);
   if (!db[data.id])
     db[data.id] = {};
   db[data.id][data.game] = data.time;
@@ -46,10 +47,20 @@ function writeDB(data) {
   console.log(db);
 }
 
+function writeSurvey(data) {
+  console.log(data);
+  if (!db[data.id])
+    db[data.id] = {}
+  db[data.id].survey = data.survey;
+  console.log(db);
+}
+
 app.post('/api/time', function(req, res, next) {
-  console.log("HIT");
-  console.log(req.body);
   writeDB(req.body);
+});
+
+app.post('/api/survey', function(req, res, next) {
+  writeSurvey(req.body);
 });
 
 // use react routes
