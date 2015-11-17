@@ -3,10 +3,10 @@
  */
 module.exports = {
   game1: {
-    title: "GAME 1: Daffy Duck looks irritated - because Bugs Bunny has been laughing at him all day!! Poke Daffy and see how quickly you can get him angry - you need fifteen pokes to win!",
+    title: "GAME 1: Poke Dash to win!”,
     nextPage: 'game2',
-    alertMessage: 'Great job! That was just practice. The next round will be faster. Get ready',
-    clickCount: 2,
+    alertMessage: 'Great job! That was just practice. The next round will be faster. Get ready.’,
+    clickCount: 5,
     getMessage: function() {
 
       return this.alertMessage;
@@ -16,11 +16,11 @@ module.exports = {
     gameTitle: "game1"
   },
   game2: {
-    title: "GAME 2: Daffy Duck looks irritated - because Bugs Bunny has been laughing at him all day!! Poke Daffy and see how quickly you can get him angry - you need fifteen pokes to win!",
+    title: "GAME 2: Poke Dash 15 times to win!”,
     nextPage: 'game3',
-    alertMessage1: "You are worse than 50% Princeton students. ",
-    alertMessage2: "You are better than 50% Princeton students. ",
-    clickCount: 1,
+    alertMessage1: "You are worse than 50% of Princeton students. ",
+    alertMessage2: "You are better than 50% of Princeton students. ",
+    clickCount: 15,
     getMessage: function() {
       return Math.random() > .5 ? this.alertMessage1 : this.alertMessage2;
     },
@@ -30,10 +30,10 @@ module.exports = {
 
   },
   game3: {
-    title: "GAME 3: Daffy Duck looks irritated - because Bugs Bunny has been laughing at him all day!! Poke Daffy and see how quickly you can get him angry - you need fifteen pokes to win!",
+    title: "GAME 3: Try again! Poke Dash 15 times to win.”,
     nextPage: 'survey',
-    alertMessage: "Great job. Please continue on to the simple survey",
-    clickCount: 1,
+    alertMessage: "Great job. Please continue on to a quick survey",
+    clickCount: 15,
     getMessage: function() {
       return this.alertMessage;
     },
