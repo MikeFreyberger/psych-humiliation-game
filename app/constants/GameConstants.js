@@ -32,7 +32,7 @@ module.exports = {
 
   },
   game3: {
-    title: "GAME 3: Try again! Poke Dash 25 times to win! Go as fast as yoy can!",
+    title: "GAME 3: Try again! Poke Dash 25 times to win! Go as fast as you can!",
     nextPage: 'survey',
     alertMessage: "Great job. Please continue on to a quick survey",
     clickCount: 25,
