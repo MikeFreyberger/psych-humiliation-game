@@ -18,10 +18,12 @@ module.exports = {
   game2: {
     title: "GAME 2: Poke Dash 15 times to win!",
     nextPage: 'game3',
-    alertMessage1: "You are worse than 50% of Princeton students. ",
-    alertMessage2: "You are better than 50% of Princeton students. ",
+    alertMessage1: "You are worse than " + (47 + Math.floor(Math.random()*7)) + "% of Princeton students. ",
+    alertMessage2: "You are better than " + (47 + Math.floor(Math.random()*7)) +"% of Princeton students. ",
     clickCount: 15,
     getMessage: function() {
+      this.alertMessage1 = "You are worse than " + (47 + Math.floor(Math.random()*7)) + "% of Princeton students.";
+      this.alertMessage2 = "You are better than " + (47 + Math.floor(Math.random()*7)) +"% of Princeton students.";
       return Math.random() > .5 ? this.alertMessage1 : this.alertMessage2;
     },
     nextLinkText: "Next Game",

@@ -39,19 +39,22 @@ if (app.get('env') === 'development') {
 }
 
 function writeDB(data) {
-  console.log(data);
+
+  console.log("New game data: " + data);
   if (!db[data.id])
     db[data.id] = {};
   db[data.id][data.game] = data.time;
   db[data.id].humiliated = db[data.id].humiliated || data.humiliated;
+  console.log('CURRENT DATABASE')
   console.log(db);
 }
 
 function writeSurvey(data) {
-  console.log(data);
+  console.log("New survey data: " + data);
   if (!db[data.id])
     db[data.id] = {}
   db[data.id].survey = data.survey;
+  console.log('CURRENT DATABASE')
   console.log(db);
 }
 

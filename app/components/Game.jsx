@@ -54,16 +54,18 @@ var Game = React.createClass({
   },
 
   handlePictureClick: function() {
-    this.movePicture();
-    clearInterval(this.state.interval);
-    this.state.interval = setInterval(this.movePicture, this.state.gameInfo.interval);
-    var hitCount = this.state.hitCount;
-    hitCount += 1;
-    this.setState(
-      {
-        hitCount: hitCount
-      }
-    );
+    if (this.state.gameOn) {
+      this.movePicture();
+      clearInterval(this.state.interval);
+      this.state.interval = setInterval(this.movePicture, this.state.gameInfo.interval);
+      var hitCount = this.state.hitCount;
+      hitCount += 1;
+      this.setState(
+        {
+          hitCount: hitCount
+        }
+      );
+    }
   },
 
   componentWillMount: function() {
