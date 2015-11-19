@@ -92,7 +92,14 @@ var Game = React.createClass({
       else {
         alert("It took you " + elapsedTime + " seconds. " + message);
       }
-      ObjectActionCreators.updateDB(this.state.userId, this.state.gameInfo.gameTitle, elapsedTime, message == GameConstants.game2.alertMessage1)
+      var humiliated;
+      if (message === this.state.gameInfo.alertMessage1)
+        humiliated = true;
+      else if (message === this.state.gameInfo.alertMessage2)
+        humiliated = false;
+      else
+        humiliated = null;
+      ObjectActionCreators.updateDB(this.state.userId, this.state.gameInfo.gameTitle, elapsedTime, humiliated)
       this.transitionTo(this.state.gameInfo.nextPage);
       this.resetState();
     }
