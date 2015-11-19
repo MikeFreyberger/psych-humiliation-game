@@ -24,7 +24,8 @@ module.exports = {
     getMessage: function() {
       this.alertMessage1 = "You are worse than " + (47 + Math.floor(Math.random()*7)) + "% of Princeton students.";
       this.alertMessage2 = "You are better than " + (47 + Math.floor(Math.random()*7)) +"% of Princeton students.";
-      return Math.random() > .5 ? this.alertMessage1 : this.alertMessage2;
+      var randNumber = Math.random();
+      return randNumber < .33 ? this.alertMessage1 : (randNumber < .66 ? this.alertMessage2 : null);
     },
     nextLinkText: "Next Game",
     interval: 650,

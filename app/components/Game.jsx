@@ -86,7 +86,8 @@ var Game = React.createClass({
       var message = this.state.gameInfo.getMessage();
       if (this.state.gameInfo.gameTitle == 'game2') {
         alert("It took you " + elapsedTime + " seconds.");
-        alert(message);
+        if (message)
+          alert(message);
       }
       else {
         alert("It took you " + elapsedTime + " seconds. " + message);
