@@ -5,7 +5,7 @@ module.exports = {
   game1: {
     title: "GAME 1: Poke Dash to win! Go as fast as you can!",
     nextPage: 'game2',
-    alertMessage: 'Great job! That was just practice. The next round will be faster. Get ready.',
+    alertMessage: 'Great job! That was just practice. The next round will be faster. Get ready. Your score will be compared to other Princeton students.',
     clickCount: 5,
     getMessage: function() {
 
