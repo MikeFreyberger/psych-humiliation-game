@@ -44,7 +44,8 @@ function writeDB(data) {
   if (!db[data.id])
     db[data.id] = {};
   db[data.id][data.game] = data.time;
-  db[data.id].humiliated = db[data.id].humiliated || data.humiliated;
+  if (data.game === 'game2')
+    db[data.id].humiliated = data.humiliated;
   console.log('CURRENT DATABASE')
   console.log(db);
 }
